@@ -5,11 +5,14 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Arial, sans-serif;
+    color:#0b3c74;
+
+
 }
 
 h1, h2, h3, h4, h5 {
     font-weight: 600;
-}
+    }
 
 h2{
     colour;#0b3c74;
@@ -35,7 +38,7 @@ header {
     padding: 10px 0;
 }
 
-.navbar {
+.main-navbar {
     width: 90%;
     margin: auto;
     display: flex;
@@ -555,3 +558,146 @@ footer {
     background-color: #f1f6ff;
 }
 
+/* fare table styling */
+
+.container {
+    color: #0b3c74;
+    width: 95%;
+    max-width: 1200px;
+    margin: 20px auto;
+   }
+
+.page-title {
+    font-size: 36px;
+    color: #0b3c74;
+   margin: 10px auto
+}
+
+.page-description {
+    font-size: 16px;
+    color: #0b3c74;
+    width: 95%;
+    margin-bottom: 20px;
+
+}
+
+.requirements {
+    color: #0b3c74;
+    margin-bottom: 40px;
+}
+
+.fare-container {
+    width: 95%;
+    margin: 30px auto;
+    background-color: white;
+    border-radius: 6px;
+    color: #0b3c74;
+}
+
+.fare-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.fare-table th,
+.fare-table td {
+    padding: 12px;
+    border: 1px solid #ccc;
+}
+
+.fare-table th {
+    background-color: #0b3c74;
+    color: white;
+    text-align: left;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: ##0b3c74; /* MUST re-apply background *
+}
+
+/* Center all columns except Route */
+.fare-table th:not(:first-child),
+.fare-table td:not(:first-child) {
+    text-align: center;
+}
+
+/* Make Route column wider */
+.fare-table th:first-child,
+.fare-table td:first-child {
+    width: 30%;
+}
+
+.fare-table tr:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    max-height: 500px;       /* controls when scrolling starts */
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+    /  /* FAQ heading */
+.faq-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+    /* FAQ items spacing */
+    .faq-item {
+        margin-bottom: 15px;
+    }
+
+    /* FAQ question button */
+    .faq-question {
+        width: 100%;
+        padding: 15px;
+        font-size: 16px;
+        background: #003366;
+        color: white;
+        border: none;
+        cursor: pointer;
+        text-align: left;
+        border-radius: 5px;
+        position: relative; /* needed for chevron */
+        padding-right: 50px; /* space for chevron */
+    }
+
+    /* Hover effect */
+    .faq-question:hover {
+        background: #005fa3;
+    }
+
+    /* Chevron using pseudo-element */
+    .faq-question::after {
+        content: "▼";
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 18px;
+        color: white;
+        pointer-events: none;
+        transition: transform 0.3s ease;
+    }
+
+    /* Rotate chevron when open */
+    .faq-question.open::after {
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    /* FAQ answer */
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        padding: 0 20px;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    /* FAQ answer when active */
+    .faq-answer.active {
+        max-height: 200px;
+        padding: 15px 20px;
+    }
