@@ -1,0 +1,916 @@
+{
+  "routes": [
+    {
+      "id": "R000001",
+      "route": "R000001",
+      "start": "loc-001",
+      "end": "loc-003",
+      "fares": {
+        "adult": 2950,
+        "child": 2400,
+        "senior": 2550,
+        "student": 2500
+      }
+    },
+    {
+      "id": "R000002",
+      "route": "R000002",
+      "start": "loc-001",
+      "end": "loc-004",
+      "fares": {
+        "adult": 4100,
+        "child": 3350,
+        "senior": 3600,
+        "student": 3500
+      }
+    },
+    {
+      "id": "R000003",
+      "route": "R000003",
+      "start": "loc-001",
+      "end": "loc-005",
+      "fares": {
+        "adult": 4400,
+        "child": 3600,
+        "senior": 3850,
+        "student": 3700
+      }
+    },
+    {
+      "id": "R000004",
+      "route": "R000004",
+      "start": "loc-001",
+      "end": "loc-006",
+      "fares": {
+        "adult": 3200,
+        "child": 2600,
+        "senior": 2800,
+        "student": 2700
+      }
+    },
+    {
+      "id": "R000005",
+      "route": "R000005",
+      "start": "loc-001",
+      "end": "loc-008",
+      "fares": {
+        "adult": 4650,
+        "child": 3800,
+        "senior": 4050,
+        "student": 3950
+      }
+    },
+    {
+      "id": "R000006",
+      "route": "R000006",
+      "start": "loc-001",
+      "end": "loc-009",
+      "fares": {
+        "adult": 5100,
+        "child": 4150,
+        "senior": 4450,
+        "student": 4300
+      }
+    },
+    {
+      "id": "R000007",
+      "route": "R000007",
+      "start": "loc-001",
+      "end": "loc-007",
+      "fares": {
+        "adult": 2100,
+        "child": 1700,
+        "senior": 1800,
+        "student": 1750
+      }
+    },
+    {
+      "id": "R000008",
+      "route": "R000008",
+      "start": "loc-001",
+      "end": "loc-010",
+      "fares": {
+        "adult": 4600,
+        "child": 3750,
+        "senior": 4000,
+        "student": 3900
+      }
+    },
+    {
+      "id": "R000009",
+      "route": null,
+      "start": null,
+      "end": null,
+      "fares": {
+        "adult": null,
+        "child": null,
+        "senior": null,
+        "student": null
+      }
+    },
+    {
+      "id": "R000010",
+      "route": "R000009",
+      "start": "loc-002",
+      "end": "loc-003",
+      "fares": {
+        "adult": 2550,
+        "child": 2050,
+        "senior": 2200,
+        "student": 2150
+      }
+    },
+    {
+      "id": "R000011",
+      "route": "R000010",
+      "start": "loc-002",
+      "end": "loc-004",
+      "fares": {
+        "adult": 3700,
+        "child": 3000,
+        "senior": 3250,
+        "student": 3100
+      }
+    },
+    {
+      "id": "R000012",
+      "route": "R000011",
+      "start": "loc-002",
+      "end": "loc-005",
+      "fares": {
+        "adult": 3950,
+        "child": 3200,
+        "senior": 3450,
+        "student": 3350
+      }
+    },
+    {
+      "id": "R000013",
+      "route": "R000012",
+      "start": "loc-002",
+      "end": "loc-008",
+      "fares": {
+        "adult": 4250,
+        "child": 3450,
+        "senior": 3700,
+        "student": 3600
+      }
+    },
+    {
+      "id": "R000014",
+      "route": "R000013",
+      "start": "loc-002",
+      "end": "loc-009",
+      "fares": {
+        "adult": 4550,
+        "child": 3700,
+        "senior": 4000,
+        "student": 3850
+      }
+    },
+    {
+      "id": "R000015",
+      "route": "R000014",
+      "start": "loc-002",
+      "end": "loc-010",
+      "fares": {
+        "adult": 4250,
+        "child": 3450,
+        "senior": 3700,
+        "student": 3600
+      }
+    },
+    {
+      "id": "R000016",
+      "route": null,
+      "start": null,
+      "end": null,
+      "fares": {
+        "adult": null,
+        "child": null,
+        "senior": null,
+        "student": null
+      }
+    },
+    {
+      "id": "R000017",
+      "route": "R000015",
+      "start": "loc-003",
+      "end": "loc-002",
+      "fares": {
+        "adult": 2550,
+        "child": 2050,
+        "senior": 2200,
+        "student": 2150
+      }
+    },
+    {
+      "id": "R000018",
+      "route": "R000016",
+      "start": "loc-003",
+      "end": "loc-001",
+      "fares": {
+        "adult": 2950,
+        "child": 2400,
+        "senior": 2550,
+        "student": 2500
+      }
+    },
+    {
+      "id": "R000019",
+      "route": "R000017",
+      "start": "loc-003",
+      "end": "loc-004",
+      "fares": {
+        "adult": 2350,
+        "child": 1900,
+        "senior": 2050,
+        "student": 1950
+      }
+    },
+    {
+      "id": "R000020",
+      "route": "R000018",
+      "start": "loc-003",
+      "end": "loc-005",
+      "fares": {
+        "adult": 2900,
+        "child": 2350,
+        "senior": 2500,
+        "student": 2450
+      }
+    },
+    {
+      "id": "R000021",
+      "route": "R000019",
+      "start": "loc-003",
+      "end": "loc-008",
+      "fares": {
+        "adult": 3400,
+        "child": 2750,
+        "senior": 2950,
+        "student": 2850
+      }
+    },
+    {
+      "id": "R000022",
+      "route": "R000020",
+      "start": "loc-003",
+      "end": "loc-009",
+      "fares": {
+        "adult": 4100,
+        "child": 3350,
+        "senior": 3600,
+        "student": 3450
+      }
+    },
+    {
+      "id": "R000023",
+      "route": "R000021",
+      "start": "loc-003",
+      "end": "loc-010",
+      "fares": {
+        "adult": 3500,
+        "child": 2600,
+        "senior": 3000,
+        "student": 2900
+      }
+    },
+    {
+      "id": "R000024",
+      "route": null,
+      "start": null,
+      "end": null,
+      "fares": {
+        "adult": null,
+        "child": null,
+        "senior": null,
+        "student": null
+      }
+    },
+    {
+      "id": "R000025",
+      "route": "R000022",
+      "start": "loc-004",
+      "end": "loc-003",
+      "fares": {
+        "adult": 2350,
+        "child": 1900,
+        "senior": 2050,
+        "student": 1950
+      }
+    },
+    {
+      "id": "R000026",
+      "route": "R000023",
+      "start": "loc-004",
+      "end": "loc-002",
+      "fares": {
+        "adult": 3700,
+        "child": 3000,
+        "senior": 3250,
+        "student": 3100
+      }
+    },
+    {
+      "id": "R000027",
+      "route": "R000024",
+      "start": "loc-004",
+      "end": "loc-001",
+      "fares": {
+        "adult": 4100,
+        "child": 3350,
+        "senior": 3600,
+        "student": 3450
+      }
+    },
+    {
+      "id": "R000028",
+      "route": "R000025",
+      "start": "loc-004",
+      "end": "loc-005",
+      "fares": {
+        "adult": 1500,
+        "child": 1200,
+        "senior": 1300,
+        "student": 1300
+      }
+    },
+    {
+      "id": "R000029",
+      "route": "R000026",
+      "start": "loc-004",
+      "end": "loc-008",
+      "fares": {
+        "adult": 2450,
+        "child": 2000,
+        "senior": 2150,
+        "student": 2050
+      }
+    },
+    {
+      "id": "R000030",
+      "route": "R000027",
+      "start": "loc-004",
+      "end": "loc-009",
+      "fares": {
+        "adult": 3100,
+        "child": 2500,
+        "senior": 2700,
+        "student": 2600
+      }
+    },
+    {
+      "id": "R000031",
+      "route": "R000028",
+      "start": "loc-004",
+      "end": "loc-010",
+      "fares": {
+        "adult": 3500,
+        "child": 2600,
+        "senior": 3000,
+        "student": 2900
+      }
+    },
+    {
+      "id": "R000032",
+      "route": null,
+      "start": null,
+      "end": null,
+      "fares": {
+        "adult": null,
+        "child": null,
+        "senior": null,
+        "student": null
+      }
+    },
+    {
+      "id": "R000033",
+      "route": "R000029",
+      "start": "loc-005",
+      "end": "loc-004",
+      "fares": {
+        "adult": 1500,
+        "child": 1200,
+        "senior": 1300,
+        "student": 1250
+      }
+    },
+    {
+      "id": "R000034",
+      "route": "R000030",
+      "start": "loc-005",
+      "end": "loc-003",
+      "fares": {
+        "adult": 2900,
+        "child": 2350,
+        "senior": 2550,
+        "student": 2450
+      }
+    },
+    {
+      "id": "R000035",
+      "route": "R000031",
+      "start": "loc-005",
+      "end": "loc-002",
+      "fares": {
+        "adult": 3950,
+        "child": 3200,
+        "senior": 3450,
+        "student": 3350
+      }
+    },
+    {
+      "id": "R000036",
+      "route": "R000032",
+      "start": "loc-005",
+      "end": "loc-001",
+      "fares": {
+        "adult": 4400,
+        "child": 3600,
+        "senior": 3850,
+        "student": 3700
+      }
+    },
+    {
+      "id": "R000037",
+      "route": "R000033",
+      "start": "loc-005",
+      "end": "loc-008",
+      "fares": {
+        "adult": 1550,
+        "child": 1250,
+        "senior": 1350,
+        "student": 1300
+      }
+    },
+    {
+      "id": "R000038",
+      "route": "R000034",
+      "start": "loc-005",
+      "end": "loc-009",
+      "fares": {
+        "adult": 2500,
+        "child": 2050,
+        "senior": 2200,
+        "student": 2100
+      }
+    },
+    {
+      "id": "R000039",
+      "route": "R000035",
+      "start": "loc-005",
+      "end": "loc-010",
+      "fares": {
+        "adult": 1550,
+        "child": 1250,
+        "senior": 1350,
+        "student": 1300
+      }
+    },
+    {
+      "id": "R000040",
+      "route": null,
+      "start": null,
+      "end": null,
+      "fares": {
+        "adult": null,
+        "child": null,
+        "senior": null,
+        "student": null
+      }
+    },
+    {
+      "id": "R000041",
+      "route": "R000036",
+      "start": "loc-008",
+      "end": "loc-005",
+      "fares": {
+        "adult": 1550,
+        "child": 1250,
+        "senior": 1350,
+        "student": 1300
+      }
+    },
+    {
+      "id": "R000042",
+      "route": "R000037",
+      "start": "loc-008",
+      "end": "loc-004",
+      "fares": {
+        "adult": 2450,
+        "child": 2000,
+        "senior": 2150,
+        "student": 2050
+      }
+    },
+    {
+      "id": "R000043",
+      "route": "R000038",
+      "start": "loc-008",
+      "end": "loc-003",
+      "fares": {
+        "adult": 3400,
+        "child": 2750,
+        "senior": 2950,
+        "student": 2850
+      }
+    },
+    {
+      "id": "R000044",
+      "route": "R000039",
+      "start": "loc-008",
+      "end": "loc-002",
+      "fares": {
+        "adult": 4250,
+        "child": 3450,
+        "senior": 3700,
+        "student": 3600
+      }
+    },
+    {
+      "id": "R000045",
+      "route": "R000040",
+      "start": "loc-008",
+      "end": "loc-001",
+      "fares": {
+        "adult": 4650,
+        "child": 3800,
+        "senior": 4050,
+        "student": 3950
+      }
+    },
+    {
+      "id": "R000046",
+      "route": "R000041",
+      "start": "loc-008",
+      "end": "loc-009",
+      "fares": {
+        "adult": 1550,
+        "child": 1250,
+        "senior": 1350,
+        "student": 1300
+      }
+    },
+    {
+      "id": "R000047",
+      "route": "R000042",
+      "start": "loc-008",
+      "end": "loc-010",
+      "fares": {
+        "adult": 1500,
+        "child": 1200,
+        "senior": 1300,
+        "student": 1250
+      }
+    },
+    {
+      "id": "R000048",
+      "route": null,
+      "start": null,
+      "end": null,
+      "fares": {
+        "adult": null,
+        "child": null,
+        "senior": null,
+        "student": null
+      }
+    },
+    {
+      "id": "R000049",
+      "route": "R000043",
+      "start": "loc-009",
+      "end": "loc-008",
+      "fares": {
+        "adult": 1550,
+        "child": 1250,
+        "senior": 1350,
+        "student": 1300
+      }
+    },
+    {
+      "id": "R000050",
+      "route": "R000044",
+      "start": "loc-009",
+      "end": "loc-005",
+      "fares": {
+        "adult": 2500,
+        "child": 2050,
+        "senior": 2200,
+        "student": 2100
+      }
+    },
+    {
+      "id": "R000051",
+      "route": "R000045",
+      "start": "loc-009",
+      "end": "loc-004",
+      "fares": {
+        "adult": 3100,
+        "child": 2500,
+        "senior": 2700,
+        "student": 2600
+      }
+    },
+    {
+      "id": "R000052",
+      "route": "R000046",
+      "start": "loc-009",
+      "end": "loc-003",
+      "fares": {
+        "adult": 4100,
+        "child": 3350,
+        "senior": 3600,
+        "student": 3450
+      }
+    },
+    {
+      "id": "R000053",
+      "route": "R000047",
+      "start": "loc-009",
+      "end": "loc-002",
+      "fares": {
+        "adult": 4550,
+        "child": 3700,
+        "senior": 4000,
+        "student": 3850
+      }
+    },
+    {
+      "id": "R000054",
+      "route": "R000048",
+      "start": "loc-009",
+      "end": "loc-001",
+      "fares": {
+        "adult": 5100,
+        "child": 4150,
+        "senior": 4450,
+        "student": 4300
+      }
+    },
+    {
+      "id": "R000055",
+      "route": "R000049",
+      "start": "loc-009",
+      "end": "loc-010",
+      "fares": {
+        "adult": 1500,
+        "child": 1200,
+        "senior": 1300,
+        "student": 1250
+      }
+    },
+    {
+      "id": "R000056",
+      "route": "R000050",
+      "start": "loc-009",
+      "end": "loc-006",
+      "fares": {
+        "adult": 3900,
+        "child": 3150,
+        "senior": 3400,
+        "student": 3300
+      }
+    },
+    {
+      "id": "R000057",
+      "route": null,
+      "start": null,
+      "end": null,
+      "fares": {
+        "adult": null,
+        "child": null,
+        "senior": null,
+        "student": null
+      }
+    },
+    {
+      "id": "R000058",
+      "route": "R000051",
+      "start": "loc-006",
+      "end": "loc-007",
+      "fares": {
+        "adult": 1550,
+        "child": 1250,
+        "senior": 1350,
+        "student": 1300
+      }
+    },
+    {
+      "id": "R000059",
+      "route": "R000052",
+      "start": "loc-006",
+      "end": "loc-002",
+      "fares": {
+        "adult": 2900,
+        "child": 2350,
+        "senior": 2500,
+        "student": 2450
+      }
+    },
+    {
+      "id": "R000060",
+      "route": "R000053",
+      "start": "loc-006",
+      "end": "loc-001",
+      "fares": {
+        "adult": 3200,
+        "child": 2600,
+        "senior": 2800,
+        "student": 2700
+      }
+    },
+    {
+      "id": "R000061",
+      "route": "R000054",
+      "start": "loc-006",
+      "end": "loc-010",
+      "fares": {
+        "adult": 3400,
+        "child": 2750,
+        "senior": 2950,
+        "student": 2850
+      }
+    },
+    {
+      "id": "R000062",
+      "route": "R000055",
+      "start": "loc-006",
+      "end": "loc-009",
+      "fares": {
+        "adult": 3900,
+        "child": 3150,
+        "senior": 3400,
+        "student": 3300
+      }
+    },
+    {
+      "id": "R000063",
+      "route": null,
+      "start": null,
+      "end": null,
+      "fares": {
+        "adult": null,
+        "child": null,
+        "senior": null,
+        "student": null
+      }
+    },
+    {
+      "id": "R000064",
+      "route": "R000056",
+      "start": "loc-007",
+      "end": "loc-002",
+      "fares": {
+        "adult": 1550,
+        "child": 1250,
+        "senior": 1350,
+        "student": 1300
+      }
+    },
+    {
+      "id": "R000065",
+      "route": "R000057",
+      "start": "loc-007",
+      "end": "loc-001",
+      "fares": {
+        "adult": 2100,
+        "child": 1700,
+        "senior": 1800,
+        "student": 1750
+      }
+    },
+    {
+      "id": "R000066",
+      "route": "R000058",
+      "start": "loc-007",
+      "end": "loc-006",
+      "fares": {
+        "adult": 1550,
+        "child": 1250,
+        "senior": 1350,
+        "student": 1300
+      }
+    },
+    {
+      "id": "R000067",
+      "route": "R000059",
+      "start": "loc-007",
+      "end": "loc-010",
+      "fares": {
+        "adult": 3550,
+        "child": 2900,
+        "senior": 3100,
+        "student": 3000
+      }
+    },
+    {
+      "id": "R000068",
+      "route": "R000060",
+      "start": "loc-007",
+      "end": "loc-009",
+      "fares": {
+        "adult": 4000,
+        "child": 3250,
+        "senior": 3500,
+        "student": 3400
+      }
+    },
+    {
+      "id": "R000069",
+      "route": null,
+      "start": null,
+      "end": null,
+      "fares": {
+        "adult": null,
+        "child": null,
+        "senior": null,
+        "student": null
+      }
+    },
+    {
+      "id": "R000070",
+      "route": "R000061",
+      "start": "loc-010",
+      "end": "loc-006",
+      "fares": {
+        "adult": 3400,
+        "child": 2750,
+        "senior": 2950,
+        "student": 2850
+      }
+    },
+    {
+      "id": "R000071",
+      "route": "R000062",
+      "start": "loc-010",
+      "end": "loc-007",
+      "fares": {
+        "adult": 3550,
+        "child": 2900,
+        "senior": 3100,
+        "student": 3000
+      }
+    },
+    {
+      "id": "R000072",
+      "route": "R000063",
+      "start": "loc-010",
+      "end": "loc-002",
+      "fares": {
+        "adult": 4250,
+        "child": 3450,
+        "senior": 3700,
+        "student": 3600
+      }
+    },
+    {
+      "id": "R000073",
+      "route": "R000064",
+      "start": "loc-010",
+      "end": "loc-001",
+      "fares": {
+        "adult": 4600,
+        "child": 3750,
+        "senior": 4000,
+        "student": 3900
+      }
+    },
+    {
+      "id": "R000074",
+      "route": "R000065",
+      "start": "loc-010",
+      "end": "loc-009",
+      "fares": {
+        "adult": 1500,
+        "child": 1200,
+        "senior": 1300,
+        "student": 1250
+      }
+    },
+    {
+      "id": "R000075",
+      "route": "R000066",
+      "start": "loc-010",
+      "end": "loc-008",
+      "fares": {
+        "adult": 1500,
+        "child": 1200,
+        "senior": 1300,
+        "student": 1250
+      }
+    },
+    {
+      "id": "R000076",
+      "route": "R000067",
+      "start": "loc-010",
+      "end": "loc-005",
+      "fares": {
+        "adult": 1550,
+        "child": 1250,
+        "senior": 1350,
+        "student": 1300
+      }
+    }
+  ]
+}

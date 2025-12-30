@@ -2,44 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Island Routes Express| Schedule</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <title>Island Routes Express | Schedules</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
-
+    <link rel="stylesheet" href="style/styles.css">
 </head>
-<body>
-
-<div >
-    <header>
-        <div class="navbar">
-            <img src="images/IslandRoutesLogo_v2.png" alt="" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="faretable.html">Fare Table</a></li>
-                    <li><a href="schedule.html" class="active">Schedule</a></li>
-                    <li><a href="locations.html">Locations</a></li>
-                    <li><a href="help.html">Help</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section class="schedule-hero">
-    </section>
-    <br>
-    <br>
-    <div class="hero-text">
+<body data-page="schedule">
+<div>
+    <div id="site-header"></div>
+    <section class="hero"></section>
+    <div class="tag-line">
         <h1>Reliable Island Transportation</h1>
         <p>Fast, safe, and comfortable bus services connecting communities across the island.</p>
     </div>
-
     <div class="search-container">
         <h2 class="h2_color">Search routes for daily schedule</h2>
-
         <div class="search-form">
             <div class="search-box">
                 <select required>
@@ -64,13 +41,10 @@
                     <option value="Sangster MBJ">Sangster MBJ</option>
                 </select>
             </div>
-
             <button class="search-btn">SEARCH</button>
-
         </div>
-
         <div class="mt-4 text-center">
-            <a href="book-now.html" class="search-btn">
+            <a href="booking.html" class="search-btn">
                 Book Now
             </a>
         </div>
@@ -163,24 +137,10 @@
         });
     </script>
 
+    <!-- FOOTER -->
+    <div id="site-footer"></div>
 
-    <footer>
-        <section class="connect">
-            <h2>Connect with Us</h2>
-            <p>We’re here to help! Reach out to us:</p>
-            <div class="connect-buttons">
-                <a href="" class="connect-btn call">📞 Call Us at 876:123-4567</a>
-                <a href="" class="connect-btn whatsapp" target="_blank">💬 WhatsApp at 876-123-4567</a>
-                <a href="" class="connect-btn instagram" target="_blank">📸 Instagram@ IslandRoutesExpress</a>
-                <a href="" class="connect-btn tiktok" target="_blank">🎵 TikTok@IslandRoutesExpress</a>
-            </div>
-            <br>
-            <div><p>Email: IslandRoutesExpress@gmail.com</p></div>
-        </section>
-        <p>&copy; 2025 Island Routes Express. All rights reserved.</p>
-    </footer>
 </div>
-
-
+<script src="scripts/app.js"></script>
 </body>
 </html>

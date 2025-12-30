@@ -2,100 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Island Routes Express| Schedule</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <title>Island Routes Express | Locations</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="style/styles.css">
 </head>
-<body>
-<div >
-    <header>
-        <div class="navbar">
-            <img src="images/IslandRoutesLogo_v2.png" alt="" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="faretable.html">Fare Table</a></li>
-                    <li><a href="schedule.html">Schedule</a></li>
-                    <li><a href="locations.html" class="active">Locations</a></li>
-                    <li><a href="help.html">Help</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section class="locations-hero">
-    </section>
-    <br>
-    <br>
-    <div class="hero-text">
-        <h1>Reliable Island Transportation</h1>
-        <p>Fast, safe, and comfortable bus services connecting communities across the island.</p>
-    </div>
-
-
+<body data-page="locations">
+<div>
+    <div id="site-header"></div>
+    <section class="hero"></section>
     <h3 class="h3_color">DAILY OPENING HOURS</h3>
-
     <div class="container my-5">
-        <div class="table-responsive">
-            <table class="table table-bordered table-hover location-table mx-auto">
-                <thead class="table-primary text-center">
+        <div>
+            <table id="offices-table">
+                <thead>
                 <tr>
-                    <th>Location</th>
-                    <th>Operating Hours</th>
+                    <th>LOCATIONS</th>
+                    <th>OPEN</th>
+                    <th>CLOSE</th>
+                    <th>ADDRESS</th>
                 </tr>
                 </thead>
-                <tbody class="text-center">
-                <tr>
-                    <td>Kingston</td>
-                    <td>4:30 AM – 9:00 PM</td>
-                </tr>
-                <tr>
-                    <td>Falmouth</td>
-                    <td>8:00 AM – 6:00 PM</td>
-                </tr>
-                <tr>
-                    <td>Mandeville</td>
-                    <td>5:30 AM – 7:00 PM</td>
-                </tr>
-                <tr>
-                    <td>May Pen</td>
-                    <td>5:30 AM – 7:00 PM</td>
-                </tr>
-                <tr>
-                    <td>Negril</td>
-                    <td>5:30 AM – 7:00 PM</td>
-                </tr>
-                <tr>
-                    <td>NMIA</td>
-                    <td>4:30 AM – 9:00 PM</td>
-                </tr>
-                <tr>
-                    <td>Sangster MBJ</td>
-                    <td>7:30 AM – 6:00 PM</td>
-                </tr>
-                </tbody>
+                <tbody></tbody>
             </table>
         </div>
     </div>
 
-    <footer>
-        <section class="connect">
-            <h2>Connect with Us</h2>
-            <p>We’re here to help! Reach out to us:</p>
-            <div class="connect-buttons">
-                <a href="" class="connect-btn call">📞 Call Us at 876:123-4567</a>
-                <a href="" class="connect-btn whatsapp" target="_blank">💬 WhatsApp at 876-123-4567</a>
-                <a href="" class="connect-btn instagram" target="_blank">📸 Instagram@ IslandRoutesExpress</a>
-                <a href="" class="connect-btn tiktok" target="_blank">🎵 TikTok@IslandRoutesExpress</a>
-            </div>
-            <br>
-            <div><p>Email: IslandRoutesExpress@gmail.com</p></div>
-        </section>
-        <p>&copy; 2025 Island Routes Express. All rights reserved.</p>
-    </footer>
+    <!-- FOOTER -->
+    <div id="site-footer"></div>
+
 </div>
+<script src="scripts/fares-locations.js"></script>
 </body>
 </html>

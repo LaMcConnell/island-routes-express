@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Island Routes Express | Bookings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+<body data-page="bookings">
+<div>
+    <div id="site-header"></div>
+    <section class="hero"></section>
+    <div class="h3_color">
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-bus-front-fill" viewBox="0 0 16 16">
+            <path d="M16 7a1 1 0 0 1-1 1v3.5c0 .818-.393 1.544-1 2v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5V14H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2a2.5 2.5 0 0 1-1-2V8a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1V2.64C1 1.452 1.845.408 3.064.268A44 44 0 0 1 8 0c2.1 0 3.792.136 4.936.268C14.155.408 15 1.452 15 2.64V4a1 1 0 0 1 1 1zM3.552 3.22A43 43 0 0 1 8 3c1.837 0 3.353.107 4.448.22a.5.5 0 0 0 .104-.994A44 44 0 0 0 8 2c-1.876 0-3.426.109-4.552.226a.5.5 0 1 0 .104.994M8 4c-1.876 0-3.426.109-4.552.226A.5.5 0 0 0 3 4.723v3.554a.5.5 0 0 0 .448.497C4.574 8.891 6.124 9 8 9s3.426-.109 4.552-.226A.5.5 0 0 0 13 8.277V4.723a.5.5 0 0 0-.448-.497A44 44 0 0 0 8 4m-3 7a1 1 0 1 0-2 0 1 1 0 0 0 2 0m8 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m-7 0a1 1 0 0 0 1 1h2a1 1 0 1 0 0-2H7a1 1 0 0 0-1 1"/>
+        </svg></span>
+        <h3 class="book-trip">Book Your Journey!</h3>
+    </div>
+    <div class="container">
+        <div id="bookingForm">
+            <div class="form-group">
+                <label for="office-origin">Departure Location</label>
+                    <select id="office-origin" onchange="filterDestinationRoutes('office-origin')">
+                </select>
+                <div id="office-origin-required"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="office-destination">Destination Location</label>
+                <select id="office-destination" onchange="showFaresByRoute()" onclick="validateOriginOfDeparture()">
+                    <option value="">-- Destination --</option>
+                </select>
+                <label id="office-destination-required"></label>
+            </div>
+
+            <div class="form-group">
+                <label for="departure-date">Departure Date</label>
+                <input type="text" class="form-control"  data-provide="datepicker" id="departure-date" placeholder="Select a Date">
+                <div id="invalid-departure-date"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="departure-time">Departure Time</label>
+                <div class="time-select">
+                    <select id="departure-time">
+                        <option value="">-- Select a Time --</option>
+                    </select>
+                </div>
+                <div id="invalid-departure-time"></div>
+            </div>
+
+            <div class="form-group">
+                <div class="trip-type">
+                    <div class="radio-option">
+                        <input type="radio" id="single" name="trip-type" value="single" onclick="toggleInfo('passengers', this); resetPassengerFares()">
+                        <label for="single">Single Trip</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="round" name="trip-type" value="round" onclick="toggleInfo('return-trip', this); resetPassengerFares()">
+                        <label for="round">Round Trip</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="return-info" id="return-trip">
+                <h3 style="margin-bottom: 20px; color: #667eea;">Return Journey</h3>
+                <div class="form-group">
+                    <label for="return-date">Return Date</label>
+                    <input type="text" class="form-control" data-provide="datepicker" id="return-date" placeholder="Select a Date">
+                    <div id="invalid-return-date"></div>
+                </div>
+                <div class="form-group">
+                    <label for="return-time">Return Time</label>
+                        <select id="return-time">
+                            <option value="">-- Select a Time --</option>
+                        </select>
+                    </div>
+                    <div id="invalid-return-time"></div>
+                </div>
+            </div>
+
+            <div id="passengers">
+                <h3 style="margin-top: 30px; margin-bottom: 15px; color: #333;">Passenger Details</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Passenger Type</th>
+                            <th>Fare ($)</th>
+                            <th>Number of Passengers</th>
+                            <th>Cost ($)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Adults:</td>
+                            <td id="adult-fare-amt"></td>
+                            <td class="num-seats">
+                                <input type="number" class="passenger-count" id="adult-count" onchange="calculateFare('adult-fare-amt', 'adult-count', 'adult-fare-total')">
+                                <div id="adult-count-err"></div>
+                            </td>
+                            <td id="adult-fare-total"></td>
+                        </tr>
+                        <tr>
+                            <td>Children (2-12): </td>
+                            <td id="child-fare-amt"></td>
+                            <td class="num-seats">
+                                <input type="number" class="passenger-count" id="child-count" onchange="calculateFare('child-fare-amt', 'child-count', 'child-fare-total')">
+                                <div id="child-count-err"></div>
+                            </td>
+                            <td id="child-fare-total"></td>
+                        </tr>
+                        <tr>
+                            <td>Seniors (65+):</td>
+                            <td id="senior-fare-amt"></td>
+                            <td class="num-seats">
+                                <input type="number" class="passenger-count" id="senior-count" onchange="calculateFare('senior-fare-amt', 'senior-count', 'senior-fare-total')">
+                                <div id="senior-count-err"></div>
+                            </td>
+                            <td id="senior-fare-total"></td>
+                        </tr>
+                        <tr>
+                            <td>Students:</td>
+                            <td id="student-fare-amt"></td>
+                            <td class="num-seats">
+                                <input type="number" class="passenger-count" id="student-count" onchange="calculateFare('student-fare-amt', 'student-count', 'student-fare-total')">
+                                <div id="student-count-err"></div>
+                            </td>
+                            <td id="student-fare-total"></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td>Grand Total: </td>
+                        <td><div id="grand-total"></div></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Available seats: </td>
+                        <td colspan="2"><div id="balanceOfSeats" style="display: none"></div><div id="totalNumberOfSeatsAddToCart" style="display: none"></div></td>
+                    </tr>
+                    </tfoot>
+                </table>
+                <button class="btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <div id="site-footer"></div>
+
+</div>
+<script src="scripts/app.js"></script>
+</body>
+</html>

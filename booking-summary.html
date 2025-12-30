@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Island Routes Express | Page not Found</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+<div>
+    <div id="site-header"></div>
+    <section class="locations-hero"></section>
+    <div class="container">
+        <div id="summaryPage">
+            <h1>Booking Summary</h1>
+
+            <div class="summary-section">
+                <h2>Journey Details</h2>
+                <div class="summary-item">
+                    <span class="summary-label">Departure:</span>
+                    <span class="summary-value" id="summaryDeparture"></span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">Destination:</span>
+                    <span class="summary-value" id="summaryDestination"></span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">Departure Date:</span>
+                    <span class="summary-value" id="summaryDepartureDate"></span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">Departure Time:</span>
+                    <span class="summary-value" id="summaryDepartureTime"></span>
+                </div>
+                <div id="returnSummary" class="hidden">
+                    <div class="summary-item">
+                        <span class="summary-label">Return:</span>
+                        <span class="summary-value" id="returnDeparture"></span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Destination:</span>
+                        <span class="summary-value" id="returnDestination"></span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Return Date:</span>
+                        <span class="summary-value" id="summaryReturnDate"></span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Return Time:</span>
+                        <span class="summary-value" id="summaryReturnTime"></span>
+                    </div>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">Total Fare:</span>
+                    <span class="summary-value" id="summaryTotal"></span>
+                </div>
+            </div>
+
+            <h2>Passenger Information</h2>
+            <div id="passengerInputs"></div>
+
+            <h2>Payment Details</h2>
+            <div class="form-group">
+                <label for="cardHolderName">Name on Card</label>
+                <input type="text" id="cardHolderName" required>
+            </div>
+            <div class="form-group">
+                <label for="cardHolderEmail">Card Holder Email</label>
+                <input type="text" id="cardHolderEmail" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" id="cardNumber" maxlength="19" placeholder="1234 5678 9012 3456" required>
+            </div>
+
+            <div class="card-row">
+                <div class="form-group">
+                    <label for="cardExpiry">Expiration Date (MM/YYYY)</label>
+                    <input type="text" id="cardExpiry" placeholder="MM/YYYY" maxlength="7" required>
+                </div>
+                <div class="form-group">
+                    <label for="cardCvc">CVC Code</label>
+                    <input type="text" id="cardCvc" maxlength="4" placeholder="123" required>
+                </div>
+            </div>
+
+            <button class="btn" onclick="submitPayment()">Submit Payment</button>
+        </div>
+
+    </div>
+    <!-- FOOTER -->
+    <div id="site-footer"></div>
+
+</div>
+<script src="scripts/booking.js">
+
+</script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Island Routes Express | Page not Found</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+<body data-page="help">
+<div>
+    <div id="site-header"></div>
+    <section class="hero"></section>
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq-item">
+            <button class="faq-question">How long is the journey?</button>
+            <div class="faq-answer">
+                <p>Travel time depends on the route but typically ranges from 2 to 4 hours.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Where are your pick-up and drop off points?</button>
+            <div class="faq-answer">
+                <p>Pick up and drop off points are located at major transport hubs in each city. </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Do you operate on Sundays and public holidays?</button>
+            <div class="faq-answer">
+                <p>Yes, we operate daily including Sundays and public holidays. </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Do you have special rates on tickets?</button>
+            <div class="faq-answer">
+                <p>Yes, discounted fares are available online, and for students, children, and seniors. </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">What is the luggage allowance?</button>
+            <div class="faq-answer">
+                <p>Each passenger is allowed one suitcase and one carry-on bag. </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">How do I pay?</button>
+            <div class="faq-answer">
+                <p>Payments can be made online on our website, or you may visit our office and do so by cash or
+                    debit/credit card.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">What are your office opening hours?</button>
+            <div class="faq-answer">
+                <p>All (except for our Negril Office) offices open one (1) hour before the departure of
+                    the first shuttle and closes after the last arrival. Please contact us for the opening hours of our
+                    Negril Office. Click here to see the opening hours of our transport offices.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">How long is my ticket valid for?</button>
+            <div class="faq-answer">
+                <p>Six months from the date of purchase.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Are fares listed one way or round trip?</button>
+            <div class="faq-answer">
+                <p>All fares listed are one way only.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Do you offer drop off/stops apart from your offices?</button>
+            <div class="faq-answer">
+                <p>No. We offer an office to office transportation.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">What methods are accepted for payment?</button>
+            <div class="faq-answer">
+                <p>We accept Visa, Mastercard & Discover cards as credit card payments and cash payments only.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question"> Are tickets refundable?</button>
+            <div class="faq-answer">
+                <p>Tickets are not refundable but are valid for use up to 6 months from the date of purchase. The ticket
+                    can be used for the same route or any route equal or lesser in value with an additional date change
+                    fee of $300.00 JMD. If the route exceeds the value of the ticket the customer must pay the remaining
+                    balance on the tick.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">I did not use my ticket can someone else use it?</button>
+            <div class="faq-answer">
+                <p>Once the physical ticket is provided it can be used by someone else.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <!-- FOOTER -->
+    <div id="site-footer"></div>
+</div>
+<script>
+
+    fetch('/masters/header.html')
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById('site-header').innerHTML = html;
+
+            // set active link
+            const page = document.body.dataset.page;
+
+            if (page) {
+                const link = document.querySelector(`a[data-page="${page}"]`);
+                if (link) link.classList.add('active');
+            }
+        });
+
+    fetch('/masters/footer.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('site-footer').innerHTML = html;
+        });
+
+    document.querySelectorAll(".faq-question").forEach(button => {
+        button.addEventListener("click", () => {
+            const expanded = button.getAttribute("aria-expanded") === "true";
+
+            document.querySelectorAll(".faq-question").forEach(b => {
+                b.setAttribute("aria-expanded", "false");
+                b.nextElementSibling.style.maxHeight = null;
+            });
+
+            if (!expanded) {
+                button.setAttribute("aria-expanded", "true");
+                const answer = button.nextElementSibling;
+                answer.style.maxHeight = answer.scrollHeight + "px";
+            }
+        });
+    });
+</script>
+</body>
+</html>
