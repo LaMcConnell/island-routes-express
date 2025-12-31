@@ -31,24 +31,24 @@ async function updateRouteFaresTable() {
     let response = await fetch(server_path + "/get-fares");
 
     if (!response.ok){
-        throw new Error("Failed to fetch fares");
+        throw new Error("Failed to fetch fares.");
     }
-
     let faresResponse = await response.json();
+
     let locationsResponse = await fetch(server_path + "/locations");
     if (!locationsResponse.ok) {
         throw new Error("Failed to fetch locations");
     }
 
     let locationsData = await locationsResponse.json();
-    let locations = locationsData.offices;
+    let locations = locationsData.officeData.offices;
 
     const tbody = document.querySelector("#fares-table tbody");
     if (!tbody) return;
 
     tbody.innerHTML = "";
 
-    faresResponse.routes.forEach((route) => {
+    faresResponse.fares.routes.forEach((route) => {
 
         const tr = document.createElement("tr");
         const departingLocation = locations.find(o => o.id === route.start)?.name;
@@ -87,7 +87,7 @@ async function updateOfficeLocations() {
         throw new Error("Failed to fetch locations");
     }
     let locationsData = await locResponse.json();
-    let locations = locationsData.offices;
+    let locations = locationsData.officeData.offices;
 
     const tbody = document.querySelector("#offices-table tbody");
     tbody.innerHTML = "";

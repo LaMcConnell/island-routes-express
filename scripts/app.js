@@ -173,7 +173,7 @@ async function populateOfficeSelect(selectId) {
     }
 
     let locationsData = await locationsResponse.json();
-    let locations = locationsData.offices;
+    let locations = locationsData.officeData.offices;
 
     locations.forEach(office => {
         const option = document.createElement('option');
@@ -205,42 +205,41 @@ async function loadRoutesFaresData(){
 
     const data = await response.json();
 
-    if (!Array.isArray(data.routes)) {
-        throw new Error("Invalid routes response");
+    if (!Array.isArray(data.fares.routes)) {
+        throw new Error("Invalid routes response.");
     }
 
-    return data.routes;
+    return data.fares.routes;
 }
 
 async function filterDestinationRoutes(origin) {
 
-    const routeDepartureOfficeId = document.getElementById(origin).value;
-    const routeDestination = document.getElementById('office-destination');
-
-    document.getElementById('office-origin-required').innerHTML = "";
-    routeDestination.innerHTML = '<option value="">-- Destination --</option>';
-
-    let destinationRoutes;
-
     try {
-        destinationRoutes = await loadRoutesFaresData();
+
+        const routeDepartureOfficeId = document.getElementById(origin).value;
+        const routeDestination = document.getElementById('office-destination');
+
+        document.getElementById('office-origin-required').innerHTML = "";
+        routeDestination.innerHTML = '<option value="">-- Destination --</option>';
+        
+        const destinationRouteFares = await loadRoutesFaresData();
+
+        for (const dest of destinationRouteFares) {
+            if (dest.start === routeDepartureOfficeId) {
+                const option = document.createElement('option');
+                option.id = dest.route;
+                option.value = dest.end;
+                option.textContent = await getLocationName(dest.end);
+
+                routeDestination.appendChild(option);
+            }
+        }
+
+        document.getElementById("balanceOfSeats").innerHTML = "";
+        
     } catch (err) {
         console.error(err);
-        return;
     }
-
-    for (const dest of destinationRoutes) {
-        if (dest.start === routeDepartureOfficeId) {
-            const option = document.createElement('option');
-            option.id = dest.route;
-            option.value = dest.end;
-            option.textContent = await getLocationName(dest.end);
-
-            routeDestination.appendChild(option);
-        }
-    }
-
-    document.getElementById("balanceOfSeats").innerHTML = "";
 }
 
 async function showFaresByRoute() {

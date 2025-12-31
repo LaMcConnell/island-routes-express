@@ -1,0 +1,14 @@
+{
+  "offices": [
+    {"id": "loc-001", "name": "Kingston", "open": "4:30AM", "closed": "8:00PM", "address": "New Kingston, Kingston 5"},
+    {"id": "loc-002", "name": "Spanish Town", "open": "5:30AM", "closed": "8:00PM", "address": "Spanish Town (Angels), St. Catherine"},
+    {"id": "loc-003", "name": "Ocho Rios", "open": "6:30AM", "closed": "7:00PM", "address": "Drax Hall, St. Ann"},
+    {"id": "loc-004", "name": "Falmouth", "open": "8:00AM", "closed": "6:00PM", "address": "Falmouth, Trelawny"},
+    {"id": "loc-005", "name": "Montego Bay (Airport)", "open": "5:30AM", "closed": "7:00PM", "address": "Montego Bay Airport, St. James"},
+    {"id": "loc-006", "name": "Mandeville", "open": "5:00AM", "closed": "7:30PM", "address": "Mandeville, Manchester"},
+    {"id": "loc-007", "name": "May Pen", "open": "8:00AM", "closed": "4:00PM", "address": "May Pen, Clarendon"},
+    {"id": "loc-008", "name": "Lucea", "open": "7:30AM", "closed": "6:00PM", "address": "Lucea, Hanover"},
+    {"id": "loc-009", "name": "Negril", "open": "5:00AM", "closed": "7:00PM", "address": "Negril, Westmoreland"},
+    {"id": "loc-010", "name": "Savanna-La-Mar", "open": "6:00AM", "closed": "6:00PM", "address": "Savanna-La-Mar, Westmoreland"}
+  ]
+}
